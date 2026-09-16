@@ -111,6 +111,67 @@ h3 {
   text-decoration: underline;
 }
 
+/* ---------- Homepage Credential Cards ---------- */
+
+.credential-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 30px;
+  align-items: center;
+
+  margin-top: 20px;
+  padding: 28px;
+
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.credential-card-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credential-card-badge img {
+  width: 100%;
+  max-width: 130px;
+  height: auto;
+  display: block;
+}
+
+.credential-card-content h3 {
+  margin: 4px 0 6px;
+  font-size: 1.35rem;
+}
+
+.credential-card-label {
+  margin: 0;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.credential-card-course {
+  margin-top: 0;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.credential-card-link {
+  display: inline-block;
+  margin-top: 6px;
+
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.credential-card-link:hover {
+  text-decoration: underline;
+}
 
 /* ---------- Credential Page ---------- */
 
@@ -259,6 +320,19 @@ h3 {
 
   .credential-badge {
     max-width: 190px;
+  }
+
+    .credential-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .credential-card-badge {
+    justify-content: flex-start;
+  }
+
+  .credential-card-badge img {
+    max-width: 110px;
   }
 
 }
