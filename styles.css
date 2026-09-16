@@ -10,10 +10,13 @@ html {
 
 body {
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
+
   color: #1f2937;
   background: #ffffff;
+
   line-height: 1.7;
 }
 
@@ -25,13 +28,17 @@ a:hover {
   color: #1e40af;
 }
 
+img {
+  max-width: 100%;
+}
 
-/* ---------- Navigation & Header ---------- */
+
+/* ---------- General Header & Navigation ---------- */
 
 header {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 35px 30px;
+  padding: 30px;
 }
 
 nav {
@@ -42,12 +49,193 @@ nav {
 
 nav a {
   color: #374151;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #1d4ed8;
+}
+
+
+/* ---------- Homepage Navigation ---------- */
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 30px 65px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-name {
+  color: #111827;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.nav-name:hover {
+  color: #1d4ed8;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #4b5563;
+
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #1d4ed8;
+}
+
+
+/* ---------- Homepage Hero ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.65fr);
+  gap: 70px;
+
+  align-items: center;
+
+  padding: 75px 0 35px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 16px;
+
+  color: #1d4ed8;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 25px;
+
+  max-width: 760px;
+
+  color: #111827;
+
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero-description {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #4b5563;
+
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+
+/* ---------- Hero Actions ---------- */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+/* ---------- Hero Headshot ---------- */
+
+.hero-visual {
+  width: 100%;
+  max-width: 330px;
+
+  justify-self: end;
+}
+
+.hero-photo-frame {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+}
+
+.hero-photo-frame::after {
+  content: "";
+
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+
+  width: 38%;
+  height: 6px;
+
+  background: #1d4ed8;
+
+  border-radius: 6px 0 18px 0;
+}
+
+.hero-photo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.hero-photo-info {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+}
+
+.hero-photo-info strong {
+  color: #111827;
+
+  font-size: 0.95rem;
+}
+
+.hero-photo-info span {
+  color: #64748b;
+
+  font-size: 0.88rem;
 }
 
 
@@ -56,29 +244,37 @@ nav a:hover {
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px 30px 80px;
+
+  padding: 0 30px 90px;
 }
 
-h1 {
-  font-size: clamp(2.3rem, 5vw, 3.5rem);
-  line-height: 1.15;
-  margin: 15px 0;
-  color: #111827;
-}
-
-h2 {
-  color: #111827;
-  margin-top: 0;
-}
-
+h1,
+h2,
 h3 {
   color: #111827;
 }
 
+h1 {
+  line-height: 1.15;
+}
+
+h2 {
+  margin-top: 0;
+
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+h3 {
+  line-height: 1.3;
+}
+
 .intro {
-  font-size: 1.15rem;
   max-width: 750px;
+
   color: #4b5563;
+
+  font-size: 1.15rem;
 }
 
 
@@ -87,15 +283,64 @@ h3 {
 #projects,
 #credentials,
 #about {
-  margin-top: 55px;
+  padding-top: 65px;
+  padding-bottom: 25px;
+
+  scroll-margin-top: 30px;
 }
 
+#projects,
+#credentials {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-eyebrow {
+  margin: 0 0 5px;
+
+  color: #1d4ed8;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-intro {
+  max-width: 760px;
+
+  color: #4b5563;
+
+  font-size: 1.05rem;
+}
+
+.about-content {
+  max-width: 800px;
+
+  color: #4b5563;
+
+  font-size: 1.05rem;
+}
+
+
+/* ---------- Generic Project Card ---------- */
+
 .project {
+  margin-top: 20px;
+  padding: 28px;
+
+  background: #ffffff;
+
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: 28px;
-  margin-top: 20px;
-  background: #ffffff;
 }
 
 .project h3 {
@@ -119,22 +364,33 @@ h3 {
   align-items: center;
   gap: 32px;
 
-  margin-top: 22px;
-  padding: 28px 32px;
-
   max-width: 850px;
 
+  margin-top: 25px;
+  padding: 28px 32px;
+
   background-color: #f8fafc;
+
   border: 1px solid #e2e8f0;
   border-radius: 16px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
 }
 
 .credential-card-badge {
-  flex: 0 0 135px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex: 0 0 135px;
 }
 
 .credential-card-badge img {
@@ -153,8 +409,10 @@ h3 {
   margin: 0 0 5px;
 
   color: #1d4ed8;
+
   font-size: 0.78rem;
   font-weight: 700;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -163,21 +421,22 @@ h3 {
   margin: 0 0 5px;
 
   font-size: 1.3rem;
-  line-height: 1.3;
 }
 
 .credential-card-course {
   margin: 0 0 12px;
 
   color: #4b5563;
+
   font-size: 0.95rem;
   font-weight: 600;
 }
 
 .credential-card-description {
+  max-width: 600px;
+
   margin: 0 0 14px;
 
-  max-width: 600px;
   color: #4b5563;
 }
 
@@ -185,12 +444,75 @@ h3 {
   display: inline-block;
 
   color: #1d4ed8;
+
   font-weight: 600;
   text-decoration: none;
 }
 
 .credential-card-link:hover {
   text-decoration: underline;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  background: #1d4ed8;
+  color: #ffffff;
+
+  border: 1px solid #1d4ed8;
+  border-radius: 8px;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  background: #1e40af;
+  color: #ffffff;
+
+  border-color: #1e40af;
+
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  color: #1f2937;
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.secondary-button:hover {
+  color: #1d4ed8;
+  background: #f8fafc;
+
+  border-color: #94a3b8;
+
+  transform: translateY(-1px);
 }
 
 
@@ -202,8 +524,9 @@ h3 {
   margin-bottom: 35px;
 
   color: #4b5563;
-  text-decoration: none;
+
   font-weight: 500;
+  text-decoration: none;
 }
 
 .back-link:hover {
@@ -214,12 +537,14 @@ h3 {
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 55px;
+
   align-items: center;
 
   padding: 45px;
   margin-bottom: 50px;
 
   background: #f8fafc;
+
   border: 1px solid #e5e7eb;
   border-radius: 18px;
 }
@@ -252,8 +577,10 @@ h3 {
   margin: 0;
 
   color: #1d4ed8;
+
   font-size: 0.85rem;
   font-weight: 700;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -262,32 +589,8 @@ h3 {
   margin-bottom: 20px;
 
   color: #4b5563;
+
   font-weight: 600;
-}
-
-
-/* ---------- Buttons ---------- */
-
-.button {
-  display: inline-block;
-
-  margin-top: 12px;
-  padding: 12px 20px;
-
-  background: #1d4ed8;
-  color: #ffffff;
-
-  border-radius: 8px;
-
-  text-decoration: none;
-  font-weight: 600;
-
-  transition: background 0.2s ease;
-}
-
-.button:hover {
-  background: #1e40af;
-  color: #ffffff;
 }
 
 
@@ -318,16 +621,40 @@ h3 {
   padding: 7px 13px;
 
   background: #f1f5f9;
+
   border: 1px solid #e2e8f0;
   border-radius: 999px;
 
   color: #334155;
+
   font-size: 0.9rem;
   font-weight: 500;
 }
 
 
 /* ---------- Responsive Design ---------- */
+
+@media (max-width: 800px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 45px;
+
+    padding-top: 55px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    max-width: 300px;
+
+    justify-self: start;
+  }
+
+}
+
 
 @media (max-width: 700px) {
 
@@ -337,8 +664,21 @@ h3 {
     padding-right: 20px;
   }
 
-  nav {
-    gap: 15px;
+  .site-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-nav {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.5rem);
   }
 
   .credential-hero {
@@ -372,6 +712,37 @@ h3 {
   .credential-card-badge img {
     width: 105px;
     max-width: 105px;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .site-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button,
+  .hero-actions .secondary-button {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 280px;
   }
 
 }
