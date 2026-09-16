@@ -82,7 +82,7 @@ h3 {
 }
 
 
-/* ---------- Homepage ---------- */
+/* ---------- Homepage Sections ---------- */
 
 #projects,
 #credentials,
@@ -111,58 +111,78 @@ h3 {
   text-decoration: underline;
 }
 
-/* ---------- Homepage Credential Cards ---------- */
+
+/* ---------- Homepage Credential Card ---------- */
 
 .credential-card {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 30px;
+  display: flex;
   align-items: center;
+  gap: 32px;
 
-  margin-top: 20px;
-  padding: 28px;
+  margin-top: 22px;
+  padding: 28px 32px;
 
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
+  max-width: 850px;
+
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
 }
 
 .credential-card-badge {
+  flex: 0 0 135px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .credential-card-badge img {
-  width: 100%;
-  max-width: 130px;
-  height: auto;
   display: block;
+
+  width: 125px;
+  max-width: 125px;
+  height: auto;
 }
 
-.credential-card-content h3 {
-  margin: 4px 0 6px;
-  font-size: 1.35rem;
+.credential-card-content {
+  flex: 1;
 }
 
 .credential-card-label {
-  margin: 0;
+  margin: 0 0 5px;
+
   color: #1d4ed8;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+.credential-card-content h3 {
+  margin: 0 0 5px;
+
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
 .credential-card-course {
-  margin-top: 0;
+  margin: 0 0 12px;
+
   color: #4b5563;
+  font-size: 0.95rem;
   font-weight: 600;
+}
+
+.credential-card-description {
+  margin: 0 0 14px;
+
+  max-width: 600px;
+  color: #4b5563;
 }
 
 .credential-card-link {
   display: inline-block;
-  margin-top: 6px;
 
   color: #1d4ed8;
   font-weight: 600;
@@ -173,11 +193,14 @@ h3 {
   text-decoration: underline;
 }
 
+
 /* ---------- Credential Page ---------- */
 
 .back-link {
   display: inline-block;
+
   margin-bottom: 35px;
+
   color: #4b5563;
   text-decoration: none;
   font-weight: 500;
@@ -209,6 +232,7 @@ h3 {
 
 .credential-badge {
   display: block;
+
   width: 100%;
   max-width: 230px;
   height: auto;
@@ -226,6 +250,7 @@ h3 {
 
 .eyebrow {
   margin: 0;
+
   color: #1d4ed8;
   font-size: 0.85rem;
   font-weight: 700;
@@ -234,9 +259,10 @@ h3 {
 }
 
 .credential-course {
+  margin-bottom: 20px;
+
   color: #4b5563;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 
@@ -252,6 +278,7 @@ h3 {
   color: #ffffff;
 
   border-radius: 8px;
+
   text-decoration: none;
   font-weight: 600;
 
@@ -268,7 +295,9 @@ h3 {
 
 .content-section {
   max-width: 800px;
+
   padding: 30px 0;
+
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -315,6 +344,7 @@ h3 {
   .credential-hero {
     grid-template-columns: 1fr;
     gap: 30px;
+
     padding: 30px 22px;
   }
 
@@ -322,96 +352,8 @@ h3 {
     max-width: 190px;
   }
 
-    .credential-card {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .credential-card-badge {
-    justify-content: flex-start;
-  }
-
-  .credential-card-badge img {
-    max-width: 110px;
-  }
-
 }
 
-/* ---------- Homepage Credential Card ---------- */
-
-.credential-card {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-
-  margin-top: 22px;
-  padding: 28px 32px;
-
-  max-width: 850px;
-
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-}
-
-.credential-card-badge {
-  flex: 0 0 135px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.credential-card-badge img {
-  display: block;
-  width: 125px;
-  max-width: 125px;
-  height: auto;
-}
-
-.credential-card-content {
-  flex: 1;
-}
-
-.credential-card-label {
-  margin: 0 0 5px;
-
-  color: #1d4ed8;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.credential-card-content h3 {
-  margin: 0 0 5px;
-  font-size: 1.3rem;
-  line-height: 1.3;
-}
-
-.credential-card-course {
-  margin: 0 0 12px;
-  color: #4b5563;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.credential-card-description {
-  margin: 0 0 14px;
-  max-width: 600px;
-  color: #4b5563;
-}
-
-.credential-card-link {
-  display: inline-block;
-
-  color: #1d4ed8;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.credential-card-link:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 650px) {
 
@@ -419,6 +361,7 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+
     padding: 24px;
   }
 
