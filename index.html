@@ -4,100 +4,209 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Professional portfolio of Aven Pacha Pinto, an M.S. Applied Computer Science candidate focused on UX/UI, front-end development, educational technology, and emerging technologies."
+  >
+
   <title>Aven Pacha Pinto | Portfolio</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
-  <header>
+  <header class="site-header">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#about">About</a>
+    <nav class="site-nav">
+
+      <a href="/" class="nav-name">
+        Aven Pacha Pinto
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#credentials">Credentials</a>
+      </div>
+
     </nav>
 
-    <h1>Aven Pacha Pinto</h1>
 
-    <p class="intro">
-      M.S. Applied Computer Science Candidate with interests in UX/UI,
-      front-end development, educational technology, and emerging technologies.
-    </p>
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="hero-eyebrow">
+          M.S. Applied Computer Science Candidate
+        </p>
+
+        <h1>
+          Designing thoughtful digital experiences at the intersection of
+          technology and education.
+        </h1>
+
+        <p class="hero-description">
+          I bring together a background in higher education with interests
+          in UX/UI design, front-end development, educational technology,
+          and emerging technologies.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button" href="#projects">
+            View Projects
+          </a>
+
+          <a class="secondary-button" href="#credentials">
+            View Credentials
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-photo-frame">
+
+          <img
+            class="hero-photo"
+            src="/assets/images/aven-pacha-headshot.png"
+            alt="Professional headshot of Aven Pacha Pinto"
+          >
+
+        </div>
+
+        <div class="hero-photo-info">
+
+          <strong>Aven Pacha Pinto</strong>
+
+          <span>
+            Detroit, Michigan
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </header>
+
 
   <main>
 
     <section id="about">
 
-      <h2>About</h2>
+      <div class="section-heading">
 
-      <p>
-        I am an Applied Computer Science graduate student with a background
-        in higher education and international education. My interests include
-        designing accessible and intuitive digital experiences, front-end
-        development, educational technology, and the responsible use of
-        emerging technologies.
-      </p>
+        <p class="section-eyebrow">
+          About Me
+        </p>
+
+        <h2>
+          Bringing technology and higher education together.
+        </h2>
+
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          I am an Applied Computer Science graduate student with a background
+          in higher education and international education. My interests include
+          designing accessible and intuitive digital experiences, front-end
+          development, educational technology, and the responsible use of
+          emerging technologies.
+        </p>
+
+      </div>
 
     </section>
-    
+
+
     <section id="projects">
 
-      <h2>Selected Projects</h2>
+      <div class="section-heading">
 
-      <p>
+        <p class="section-eyebrow">
+          Portfolio
+        </p>
+
+        <h2>
+          Selected Projects
+        </h2>
+
+      </div>
+
+      <p class="section-intro">
         Projects in software development, UX/UI, educational technology,
         and applied computer science will be added here.
       </p>
 
     </section>
 
+
     <section id="credentials">
 
-      <h2>Credentials</h2>
-    
+      <div class="section-heading">
+
+        <p class="section-eyebrow">
+          Professional Development
+        </p>
+
+        <h2>
+          Credentials
+        </h2>
+
+      </div>
+
+
       <div class="credential-card">
-    
+
         <div class="credential-card-badge">
-    
+
           <img
             src="/assets/images/aws-cloud-foundations-badge.png"
             alt="AWS Academy Graduate Cloud Foundations badge"
           >
-    
+
         </div>
-    
+
+
         <div class="credential-card-content">
-    
-          <p class="credential-card-label">AWS Academy</p>
-    
-          <h3>AWS Academy Graduate – Cloud Foundations</h3>
-    
+
+          <p class="credential-card-label">
+            AWS Academy
+          </p>
+
+          <h3>
+            AWS Academy Graduate – Cloud Foundations
+          </h3>
+
           <p class="credential-card-course">
             CS506 — Distributed Cloud Computing
           </p>
-    
+
           <p class="credential-card-description">
             Completed AWS Academy training in foundational cloud computing,
             architecture, networking, compute, storage, databases, security,
             scaling, and monitoring.
           </p>
-    
+
           <a
             class="credential-card-link"
             href="credentials/aws-cloud-foundations.html"
           >
             View Credential →
           </a>
-    
+
         </div>
-    
+
       </div>
-    
+
     </section>
 
   </main>
