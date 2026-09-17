@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="CS591 Advanced Artificial Intelligence team project exploring Gradient Descent, Stochastic Gradient Descent, and neural network classification using TensorFlow."
+  >
+
+  <title>Machine Learning Optimization & Neural Network Classification | Aven Pacha Pinto</title>
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#credentials">Credentials</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <a class="back-link" href="/#projects">
+      ← Back to Projects
+    </a>
+
+
+    <section class="project-detail-hero">
+
+      <div>
+
+        <p class="section-eyebrow">
+          CS591 — Advanced Artificial Intelligence
+        </p>
+
+        <h1>
+          Machine Learning Optimization & Neural Network Classification
+        </h1>
+
+        <p class="project-lead">
+          A team project exploring machine learning optimization from first
+          principles and applying a TensorFlow neural network to a real-world
+          image classification problem.
+        </p>
+
+        <div class="project-meta">
+
+          <span class="project-tag">
+            Team Project
+          </span>
+
+          <span class="project-tag">
+            Python
+          </span>
+
+          <span class="project-tag">
+            TensorFlow
+          </span>
+
+          <span class="project-tag">
+            Machine Learning
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <h2>
+        Project Overview
+      </h2>
+
+      <p>
+        This project was completed as part of a five-person team in
+        CS591: Advanced Artificial Intelligence. The project combined
+        machine learning fundamentals with a practical neural network
+        application.
+      </p>
+
+      <p>
+        In the first part, the team implemented Gradient Descent and
+        Stochastic Gradient Descent from scratch to fit polynomial curves
+        to a dataset. In the second part, the team designed and trained a
+        feed-forward neural network using TensorFlow/Keras to classify
+        clothing images from the Fashion-MNIST dataset.
+      </p>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <p class="section-eyebrow">
+        Part 1
+      </p>
+
+      <h2>
+        Optimization from Scratch
+      </h2>
+
+      <p>
+        The first part of the project focused on understanding how machine
+        learning models update feature weights during training. The team
+        implemented both Gradient Descent (GD) and Stochastic Gradient
+        Descent (SGD) rather than relying on a pre-built optimizer.
+      </p>
+
+      <p>
+        The input data was normalized to prevent exploding gradients when
+        working with higher-order polynomial features. Experiments compared
+        models using three, four, and five features and learning rates of
+        0.01, 0.05, and 0.10.
+      </p>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            GD vs. SGD
+          </strong>
+
+          <p>
+            Compared the behavior of batch Gradient Descent with the
+            faster but noisier updates produced by Stochastic Gradient
+            Descent.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Model Complexity
+          </strong>
+
+          <p>
+            Tested quadratic, cubic, and quartic polynomial models to
+            examine how additional features affected curve fitting.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Learning Rates
+          </strong>
+
+          <p>
+            Evaluated multiple learning rates to observe how step size
+            influenced the speed and stability of model training.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <p class="section-eyebrow">
+        Part 2
+      </p>
+
+      <h2>
+        Fashion Image Classification
+      </h2>
+
+      <p>
+        For the applied portion of the project, the team used the
+        Fashion-MNIST dataset to explore computer vision and automated
+        clothing classification.
+      </p>
+
+      <p>
+        The model was built using TensorFlow/Keras and used a flattened
+        28 × 28 pixel input, a hidden layer with 128 ReLU neurons, and a
+        10-class Softmax output layer. Stochastic Gradient Descent was used
+        as the optimizer to connect the neural network application back to
+        the optimization concepts explored earlier in the project.
+      </p>
+
+
+      <div class="metric-grid">
+
+        <div class="metric-card">
+
+          <span class="metric-value">
+            60,000
+          </span>
+
+          <span class="metric-label">
+            Training Images
+          </span>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <span class="metric-value">
+            10,000
+          </span>
+
+          <span class="metric-label">
+            Testing Images
+          </span>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <span class="metric-value">
+            15
+          </span>
+
+          <span class="metric-label">
+            Training Epochs
+          </span>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <span class="metric-value">
+            85.25%
+          </span>
+
+          <span class="metric-label">
+            Test Accuracy
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <h2>
+        Results & Limitations
+      </h2>
+
+      <p>
+        The neural network reached a test accuracy of 85.25%. Training and
+        validation accuracy followed similar trends, suggesting that the
+        model generalized reasonably well to unseen images.
+      </p>
+
+      <p>
+        One important limitation was the use of a Flatten layer. Converting
+        each two-dimensional image into a one-dimensional array removes
+        spatial relationships between nearby pixels. A future version could
+        use a Convolutional Neural Network (CNN) to preserve and learn from
+        spatial features such as edges, shapes, and textures.
+      </p>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <h2>
+        What I Learned
+      </h2>
+
+      <p>
+        This project strengthened my understanding of how optimization
+        methods affect the way machine learning models learn. Working
+        through Gradient Descent and Stochastic Gradient Descent helped
+        make concepts such as feature weights, learning rates, and
+        convergence more concrete. The neural network portion also gave
+        me experience with the process of preparing data, building and
+        training a model in TensorFlow, evaluating its performance, and
+        considering the limitations of the selected architecture.
+      </p>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <h2>
+        Technologies & Concepts
+      </h2>
+
+      <div class="skills">
+
+        <span class="skill">Python</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">TensorFlow</span>
+        <span class="skill">Keras</span>
+        <span class="skill">Matplotlib</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Neural Networks</span>
+        <span class="skill">Gradient Descent</span>
+        <span class="skill">Stochastic Gradient Descent</span>
+        <span class="skill">Fashion-MNIST</span>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+      <h2>
+        Project Materials
+      </h2>
+
+      <p class="project-note">
+        This project was completed collaboratively as part of CS591:
+        Advanced Artificial Intelligence. Project materials will be shared
+        here when appropriate for public distribution.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
