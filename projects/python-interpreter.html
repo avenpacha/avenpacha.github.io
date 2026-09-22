@@ -3,58 +3,24 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Aven Pacha Pinto's CS609 interpreter project: AST and parser development, team collaboration, and potential applications in higher education."
+    content="Aven Pacha Pinto's CS609 team project: developing the parser and Abstract Syntax Tree for a custom-language interpreter in Python, with a focus on collaborative software development."
   >
 
-  <title>Building a Python Interpreter | Aven Pacha Pinto</title>
+  <title>
+    Building a Python Interpreter | Aven Pacha Pinto
+  </title>
 
   <link rel="stylesheet" href="/styles.css">
 
   <style>
-    .cs609-page .application-example {
-      border: 1px solid #d9dfe8;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
 
-    .cs609-page .example-step {
-      background: #f3f6fa;
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-    .cs609-page .example-step p:last-child {
-      margin-bottom: 0;
-    }
-
-    .cs609-page .example-arrow {
-      text-align: center;
-      font-size: 1.5rem;
-      margin: 0.5rem 0;
-    }
-
-    .cs609-page .example-note {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    .cs609-page pre {
-      overflow-x: auto;
-      padding: 1rem;
-      border-radius: 8px;
-      background: #202734;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+    /* Interpreter workflow */
 
     .cs609-page .pipeline {
       display: grid;
@@ -68,37 +34,85 @@
       padding: 1rem;
     }
 
+    .cs609-page .pipeline-step h3 {
+      margin-top: 0;
+    }
+
+    .cs609-page .pipeline-step p:last-child {
+      margin-bottom: 0;
+    }
+
     .cs609-page .my-contribution {
       border: 2px solid #6485a8;
     }
 
-    .cs609-page .pipeline-step p {
-      margin-bottom: 0;
+    .cs609-page .component-label {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Example program */
+
+    .cs609-page pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #202734;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Responsive YouTube video */
+
+    .cs609-page .project-video {
+      width: 100%;
+      max-width: 900px;
+      margin: 1.5rem 0;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000000;
+    }
+
+    .cs609-page .project-video iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     @media (prefers-color-scheme: dark) {
-      .cs609-page .application-example,
+
       .cs609-page .pipeline-step {
         border-color: #667084;
       }
 
-      .cs609-page .example-step {
-        background: #263142;
+      .cs609-page .my-contribution {
+        border-color: #91b8e3;
       }
+
     }
+
   </style>
 
 </head>
 
+
 <body>
 
+  <!-- Navigation -->
+
   <header>
+
     <nav>
       <a href="/">Home</a>
       <a href="/#about">About</a>
       <a href="/#projects">Projects</a>
       <a href="/#credentials">Credentials</a>
     </nav>
+
   </header>
 
 
@@ -117,33 +131,37 @@
         CS609 — Advanced Programming Languages · Team Project
       </p>
 
-      <h1>Building a Python Interpreter</h1>
+      <h1>
+        Building a Python Interpreter
+      </h1>
 
-      
       <p class="project-lead">
         Developing and integrating the components of a custom
         interpreter through collaborative software development.
       </p>
 
       <p>
-        For this team project, we built a small interpreter
-        in Python that reads instructions, organizes them into
-        a structure the computer can understand, and executes
-        operations such as calculations and variable assignments.
+        Our three-person team built a small interpreter in Python
+        that reads written instructions and executes operations
+        such as variable assignments, arithmetic calculations,
+        and print statements.
       </p>
 
       <p>
         <strong>My contribution:</strong>
         I developed the Abstract Syntax Tree (AST) nodes and
-        parser, which work together to recognize the structure
-        of written instructions and prepare them for execution.
+        parser, which organize written instructions into a
+        structure the interpreter can evaluate.
       </p>
 
       <div class="project-meta">
 
         <span class="project-tag">Python</span>
+
         <span class="project-tag">Software Development</span>
+
         <span class="project-tag">Parsing</span>
+
         <span class="project-tag">Team Collaboration</span>
 
       </div>
@@ -161,9 +179,16 @@
 
         <a
           class="secondary-button"
-          href="#real-world-application"
+          href="#my-contributions"
         >
-          Explore a Real-World Application
+          Explore My Contributions
+        </a>
+
+        <a
+          class="secondary-button"
+          href="#project-demo"
+        >
+          Watch Project Demo
         </a>
 
       </div>
@@ -175,265 +200,336 @@
 
     <section class="project-section">
 
-      <h2>Project Overview</h2>
+      <h2>
+        Project Overview
+      </h2>
 
       <p>
-        An interpreter is software that reads instructions
-        written in a programming language and carries out
-        their meaning.
+        For this group project, our team developed an interpreter
+        for a small custom programming language. The program
+        processes written instructions and executes operations
+        such as variable assignments, arithmetic calculations,
+        and print statements.
       </p>
 
       <p>
-        Our team built an interpreter for a small custom
-        language supporting variable assignments, arithmetic
-        expressions, print statements, and multiple statements.
-        The interpreter processes the instructions through
-        separate components for lexical analysis, parsing,
-        and execution.
+        We divided the interpreter into interconnected components,
+        with each team member responsible for a different part
+        of the program. I developed the AST nodes and parser,
+        which work together to recognize the structure of
+        instructions and prepare them for execution.
       </p>
 
       <p>
-        I was responsible for the parser and AST, which
-        organize the instructions so the interpreter can
-        process them in the correct structure and order.
-        I also collaborated with my teammates on testing,
-        documentation, and the project demonstration.
+        Completing the project required us to understand how
+        our individual components worked together, coordinate
+        their integration, and test the complete program.
+        I also contributed to our shared testing, documentation,
+        and project demonstration.
       </p>
 
     </section>
 
 
-    <!-- Real-World Application -->
+    <!-- My Role and Contributions -->
+
+    <section
+      class="project-section"
+      id="my-contributions"
+    >
+
+      <h2>
+        My Role &amp; Contributions
+      </h2>
+
+      <p>
+        My primary responsibility was developing the Abstract
+        Syntax Tree (AST) nodes and parser. These components
+        transform the tokens produced by the lexer into a
+        structured representation that the interpreter can
+        use to execute the program.
+      </p>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            AST Development
+          </strong>
+
+          <p>
+            Defined the structures used to represent variable
+            assignments, print statements, numeric values,
+            variables, and arithmetic expressions.
+          </p>
+
+          <p>
+            This structure makes it possible for the interpreter
+            to recognize different types of instructions and
+            process them consistently.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Parser Development
+          </strong>
+
+          <p>
+            Implemented the parsing logic for recognizing
+            valid instructions, applying the language's
+            grammar, and handling the correct order
+            of arithmetic operations.
+          </p>
+
+          <p>
+            The parser organizes tokens into AST nodes
+            that the interpreter can evaluate.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Integration &amp; Testing
+          </strong>
+
+          <p>
+            Collaborated with my teammates to bring our
+            separately developed components together
+            into a functioning interpreter.
+          </p>
+
+          <p>
+            Contributed to testing the complete program
+            and documenting its functionality in our
+            final report and demonstration.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Collaboration and Professional Skills -->
+
+    <section class="project-section">
+
+      <h2>
+        Collaboration &amp; Professional Skills
+      </h2>
+
+      <p>
+        Building the interpreter as a team gave me experience
+        developing software as part of a larger system,
+        rather than working on an isolated programming
+        assignment.
+      </p>
+
+
+      <h3>
+        Developing Interconnected Components
+      </h3>
+
+      <p>
+        My parser and AST needed to work with the lexer
+        and interpreter developed by my teammates.
+        This required understanding what information
+        each component received, how it processed that
+        information, and what it needed to pass to the
+        next part of the program.
+      </p>
+
+      <p>
+        This experience is relevant to professional software
+        development, where individual features must work
+        correctly within a larger application.
+      </p>
+
+
+      <h3>
+        Coordinating and Integrating Teamwork
+      </h3>
+
+      <p>
+        We divided the project into separate responsibilities
+        and brought our work together into one functioning
+        interpreter. Because each component depended on
+        another, integration required us to coordinate
+        how information moved through the program
+        and verify that the components worked together
+        as intended.
+      </p>
+
+      <p>
+        This gave me practical experience contributing
+        to a shared technical goal while being responsible
+        for my own part of the project.
+      </p>
+
+
+      <h3>
+        Testing and Problem-Solving
+      </h3>
+
+      <p>
+        Our team tested the individual components and
+        the complete interpreter using sample programs
+        and expected outputs.
+      </p>
+
+      <p>
+        We checked that the program correctly processed
+        variable assignments, arithmetic operations,
+        print statements, and multiple instructions.
+        Testing the integrated program helped us verify
+        that the components worked together correctly.
+      </p>
+
+
+      <h3>
+        Documentation and Communication
+      </h3>
+
+      <p>
+        I also contributed to our final project report
+        and demonstration. We documented the interpreter's
+        structure, explained how the components worked
+        together, and presented examples of the program
+        processing and executing instructions.
+      </p>
+
+      <p>
+        These activities helped me gain experience
+        explaining technical work, documenting software
+        functionality, and communicating the results
+        of a collaborative programming project.
+      </p>
+
+    </section>
+
+
+    <!-- Potential Real-World Application -->
 
     <section
       class="project-section"
       id="real-world-application"
     >
 
-      <h2>Real-World Application: Academic Advising Systems</h2>
+      <h2>
+        Potential Real-World Application
+      </h2>
 
       <p>
-        Universities use software to help students and
-        academic advisors understand course prerequisites,
-        degree requirements, and progress toward graduation.
+        The concepts behind a custom interpreter can be
+        applied to software that processes predefined rules
+        and calculations. For example, a university
+        course-planning system could use similar technology
+        to calculate remaining credit hours or, with
+        additional functionality, determine whether
+        students meet course prerequisites.
       </p>
 
       <p>
-        Although students and advisors may interact with
-        these systems through forms, buttons, and menus,
-        the application must process academic rules
-        behind the scenes.
-      </p>
-
-      <p>
-        A custom rules interpreter could help an application
-        evaluate a limited set of predefined academic
-        requirements. For example, a course-planning tool
-        could calculate remaining credit hours or, with
-        additional functionality, determine whether a student
-        meets the prerequisites for a particular course.
-      </p>
-
-
-      <div class="application-example">
-
-        <h3>Example: Tracking Progress Toward a Credit Requirement</h3>
-
-        <p class="example-note">
-          Illustrative higher education application.
-          This is not a feature developed for the CS609 project.
-        </p>
-
-
-        <div class="example-step">
-
-          <h4>1. An advisor views a student's progress</h4>
-
-          <p>
-            A student has completed 45 credits toward
-            a 60-credit requirement.
-          </p>
-
-        </div>
-
-
-        <div class="example-arrow" aria-hidden="true">
-          ↓
-        </div>
-
-
-        <div class="example-step">
-
-          <h4>2. The application evaluates a calculation</h4>
-
-          <p>
-            Behind the scenes, the software could represent
-            the calculation using simple instructions:
-          </p>
-
-          <pre><code>let completed_credits = 45;
-let required_credits = 60;
-let credits_remaining = required_credits - completed_credits;
-print(credits_remaining);</code></pre>
-
-        </div>
-
-
-        <div class="example-arrow" aria-hidden="true">
-          ↓
-        </div>
-
-
-        <div class="example-step">
-
-          <h4>3. The advisor sees the result</h4>
-
-          <p>
-            <strong>15 credits remaining</strong>
-          </p>
-
-          <p>
-            The advisor can use this information without
-            needing to understand the programming logic
-            behind the calculation.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <h3>How This Connects to My Work</h3>
-
-      <p>
-        My work on the parser and AST involved recognizing
-        instructions and organizing them into a structure
-        that the interpreter could evaluate.
-      </p>
-
-      <p>
-        The same foundational concepts can support software
-        that processes structured rules, calculations, and
-        application workflows.
-      </p>
-
-      <p>
-        In a real academic advising system, additional
-        functionality would be needed to evaluate conditions,
-        securely access student records, validate inputs,
-        and enforce institutional requirements.
-        Our course project demonstrates the underlying
-        language-processing concepts rather than a complete
-        academic eligibility system.
+        Our project demonstrates the foundational
+        language-processing concepts behind these
+        applications, rather than a completed
+        academic advising system.
       </p>
 
     </section>
 
 
-    <!-- Workplace Skills -->
+    <!-- How the Interpreter Works -->
 
     <section class="project-section">
 
-      <h2>How This Experience Applies to Software Development</h2>
-
-      <h3>Translating Requirements into Program Logic</h3>
-
-      <p>
-        I developed parsing logic that recognizes
-        assignments, print statements, and arithmetic
-        expressions according to the language's grammar.
-        This strengthened my ability to translate defined
-        rules into organized software behavior.
-      </p>
-
-
-      <h3>Developing Interconnected Software Components</h3>
+      <h2>
+        How the Interpreter Works
+      </h2>
 
       <p>
-        My parser and AST needed to work with the lexer
-        and interpreter developed by my teammates.
-        This gave me experience building components
-        that form part of a larger application.
-      </p>
-
-
-      <h3>Collaborating and Testing</h3>
-
-      <p>
-        Our team divided the project into components,
-        integrated them into one program, and tested
-        the interpreter using sample instructions and
-        expected outputs.
-      </p>
-
-      <p>
-        I also contributed to the shared project report
-        and demonstration, gaining experience explaining
-        technical work and documenting a collaborative
-        software project.
-      </p>
-
-    </section>
-
-
-    <!-- How It Works -->
-
-    <section class="project-section">
-
-      <h2>How the Interpreter Works</h2>
-
-      <p>
-        The interpreter processes written instructions
-        through several connected components.
+        Our interpreter processes written instructions
+        through several connected components. Each
+        component performs a different task before
+        the program produces its final output.
       </p>
 
       <div class="pipeline">
 
+
+        <!-- Lexer -->
+
         <div class="pipeline-step">
 
-          <h3>1. Lexer</h3>
+          <h3>
+            1. Lexer
+          </h3>
 
           <p>
-            Breaks source code into recognizable pieces
-            called tokens.
+            Reads the source code and breaks it into
+            recognizable pieces called tokens.
           </p>
 
-          <p class="example-note">
-            Developed by a teammate.
+          <p class="component-label">
+            Developed by a teammate
           </p>
 
         </div>
 
+
+        <!-- Parser and AST -->
 
         <div class="pipeline-step my-contribution">
 
-          <h3>2. Parser &amp; Abstract Syntax Tree</h3>
+          <h3>
+            2. Parser &amp; Abstract Syntax Tree
+          </h3>
 
           <p>
-            Organizes the tokens into a structured
-            representation of the instructions.
-            The parser also applies the language's
-            grammar and arithmetic precedence rules.
+            The parser checks how the tokens fit together
+            according to the language's grammar.
+            It then organizes them into an Abstract
+            Syntax Tree (AST), which represents the
+            instructions in a structured form.
           </p>
 
           <p>
-            <strong>My individual contribution.</strong>
+            This includes handling variable assignments,
+            print statements, arithmetic expressions,
+            and the correct order of operations.
+          </p>
+
+          <p class="component-label">
+            My individual contribution
           </p>
 
         </div>
 
 
+        <!-- Interpreter -->
+
         <div class="pipeline-step">
 
-          <h3>3. Interpreter</h3>
+          <h3>
+            3. Interpreter
+          </h3>
 
           <p>
-            Evaluates the structured instructions
+            Evaluates the AST, executes the instructions,
             and produces the program's output.
           </p>
 
-          <p class="example-note">
-            Developed by a teammate.
+          <p class="component-label">
+            Developed by a teammate
           </p>
 
         </div>
@@ -441,11 +537,16 @@ print(credits_remaining);</code></pre>
       </div>
 
 
-      <h3>Example Program</h3>
+      <!-- Example Program -->
+
+      <h3>
+        Example Program
+      </h3>
 
       <p>
-        The following example demonstrates the simple
-        language supported by our interpreter.
+        The following example demonstrates how our
+        interpreter processes variable assignments
+        and arithmetic calculations.
       </p>
 
       <pre><code>let x = 10 + 5;
@@ -453,30 +554,108 @@ let y = x * 2;
 print(x);
 print(y);</code></pre>
 
-      <p><strong>Output:</strong></p>
+      <p>
+        <strong>Output:</strong>
+      </p>
 
       <pre><code>15
 30</code></pre>
 
+      <p>
+        The interpreter first assigns the value 15 to
+        the variable x, then uses that value to calculate
+        y. The print statements display the two results.
+      </p>
+
     </section>
 
 
-    <!-- Skills -->
+    <!-- Recorded Group Project Demo -->
+
+    <section
+      class="project-section"
+      id="project-demo"
+    >
+
+      <h2>
+        Group Project Demo
+      </h2>
+
+      <p>
+        Watch our team's recorded demonstration of the
+        interpreter project. The video provides an opportunity
+        to see the completed program and how we presented
+        our collaborative work.
+      </p>
+
+      <p>
+        Preparing and presenting the demonstration was also
+        part of our shared project responsibilities. It gave
+        us an opportunity to communicate how the different
+        components contributed to the complete interpreter.
+      </p>
+
+
+      <!-- Responsive YouTube Embed -->
+
+      <div class="project-video">
+
+        <iframe
+          src="https://www.youtube.com/embed/_fsjD74m7tY"
+          title="CS609 Python Interpreter — Group Project Demo"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+      </div>
+
+
+      <p>
+
+        <a
+          href="https://www.youtube.com/watch?v=_fsjD74m7tY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch the group project demo on YouTube →
+        </a>
+
+      </p>
+
+    </section>
+
+
+    <!-- Skills and Technologies -->
 
     <section class="project-section">
 
-      <h2>Skills &amp; Technologies</h2>
+      <h2>
+        Skills &amp; Technologies
+      </h2>
 
       <div class="skills">
 
         <span class="skill">Python</span>
+
         <span class="skill">Parsing</span>
+
         <span class="skill">Abstract Syntax Trees</span>
+
         <span class="skill">Software Architecture</span>
+
         <span class="skill">Program Logic</span>
+
+        <span class="skill">Software Integration</span>
+
         <span class="skill">Testing</span>
+
         <span class="skill">Team Collaboration</span>
+
         <span class="skill">Technical Documentation</span>
+
+        <span class="skill">Technical Communication</span>
 
       </div>
 
@@ -487,11 +666,14 @@ print(y);</code></pre>
 
     <section class="project-section">
 
-      <h2>Project Materials</h2>
+      <h2>
+        Project Materials
+      </h2>
 
       <p>
-        Explore the complete team project or review
-        the two components I developed.
+        Explore the complete team project, review the
+        two components I developed, read our final
+        project report, or watch the recorded demonstration.
       </p>
 
       <div class="hero-actions">
@@ -530,6 +712,15 @@ print(y);</code></pre>
           rel="noopener noreferrer"
         >
           Read Project Report
+        </a>
+
+        <a
+          class="secondary-button"
+          href="https://www.youtube.com/watch?v=_fsjD74m7tY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch Project Demo
         </a>
 
       </div>
