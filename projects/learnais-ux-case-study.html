@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -22,227 +21,50 @@
 
   <link rel="stylesheet" href="/styles.css">
 
+  <!-- Styling only for the wireframes and embedded video -->
   <style>
 
-    /* Main case study layout */
-
-    .learnais-page {
-      box-sizing: border-box;
-      width: min(1050px, calc(100% - 2rem));
-      margin: 0 auto;
-      padding: 2rem 0 5rem;
+    .learnais-wireframes {
+      margin: 28px 0;
     }
 
-    .learnais-page *,
-    .learnais-page *::before,
-    .learnais-page *::after {
-      box-sizing: border-box;
-    }
-
-    .learnais-page .case-section {
-      margin: 3.5rem 0;
-    }
-
-    .learnais-page .case-section h2 {
-      margin-bottom: 1rem;
-    }
-
-    .learnais-page .case-lead {
-      max-width: 800px;
-      font-size: 1.15rem;
-      line-height: 1.7;
-    }
-
-    .learnais-page .case-eyebrow {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.75;
-    }
-
-    .learnais-page .case-meta {
-      margin: 1.25rem 0;
-      line-height: 1.8;
-    }
-
-    /* Links and buttons */
-
-    .learnais-page .case-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
-
-    .learnais-page .case-actions a {
-      display: inline-block;
-      padding: 0.8rem 1.15rem;
-      border: 1px solid #64748b;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .learnais-page .case-actions a.primary {
-      background: #254d77;
-      border-color: #254d77;
-      color: #ffffff;
-    }
-
-    .learnais-page .case-actions a.secondary {
-      color: inherit;
-    }
-
-    .learnais-page .case-actions a:hover {
-      opacity: 0.85;
-    }
-
-    /* Wireframe image */
-
-    .learnais-page .case-figure {
-      margin: 1.5rem 0;
-    }
-
-    .learnais-page .case-figure img {
+    .learnais-wireframes img {
       display: block;
       width: 100%;
       height: auto;
-      border: 1px solid #d6dde7;
-      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
     }
 
-    .learnais-page .case-figure figcaption {
-      margin-top: 0.65rem;
+    .learnais-wireframes figcaption {
+      margin-top: 12px;
+      color: #64748b;
       font-size: 0.9rem;
-      line-height: 1.5;
-      opacity: 0.8;
+      line-height: 1.6;
     }
 
-    /* Embedded prototype video */
-
-    .learnais-page .case-video {
+    .learnais-video {
       width: 100%;
-      max-width: 900px;
-      margin: 1.5rem auto;
+      max-width: 850px;
+      margin: 28px 0 12px;
       aspect-ratio: 16 / 9;
       overflow: hidden;
       border-radius: 12px;
-      background: #000000;
+      background: #000;
     }
 
-    .learnais-page .case-video iframe {
+    .learnais-video iframe {
       display: block;
       width: 100%;
       height: 100%;
       border: 0;
     }
 
-    .learnais-page .case-video-caption {
-      max-width: 900px;
-      margin: 0.75rem auto 1.5rem;
+    .learnais-video-caption {
+      max-width: 850px;
+      color: #64748b;
       font-size: 0.9rem;
-      line-height: 1.5;
-      opacity: 0.8;
-    }
-
-    /* Text highlights */
-
-    .learnais-page .case-card {
-      padding: 1.35rem;
-      margin: 1rem 0;
-      border: 1px solid #d6dde7;
-      border-radius: 10px;
-    }
-
-    .learnais-page .case-card h3 {
-      margin-top: 0;
-    }
-
-    .learnais-page .case-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .learnais-page .case-highlight {
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 10px;
-      background: #eef3f8;
-      color: #1e293b;
-    }
-
-    .learnais-page .case-highlight h3,
-    .learnais-page .case-highlight p {
-      color: #1e293b;
-    }
-
-    .learnais-page .case-highlight h3 {
-      margin-top: 0;
-    }
-
-    .learnais-page .case-highlight p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* UX process steps */
-
-    .learnais-page .case-process {
-      display: grid;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .learnais-page .case-process-step {
-      padding: 0.25rem 0 0.25rem 1rem;
-      border-left: 3px solid #6485a8;
-    }
-
-    .learnais-page .case-process-step h3 {
-      margin-top: 0;
-    }
-
-    .learnais-page .case-process-step p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Skills */
-
-    .learnais-page .case-skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .learnais-page .case-skills span {
-      display: inline-block;
-      padding: 0.4rem 0.7rem;
-      border-radius: 6px;
-      background: #e8eef5;
-      color: #1e293b;
-      font-size: 0.9rem;
-    }
-
-    /* Mobile layout */
-
-    @media (max-width: 700px) {
-
-      .learnais-page {
-        padding-top: 1.25rem;
-      }
-
-      .learnais-page .case-section {
-        margin: 2.5rem 0;
-      }
-
-      .learnais-page .case-actions {
-        flex-direction: column;
-      }
-
-      .learnais-page .case-actions a {
-        text-align: center;
-      }
-
+      line-height: 1.6;
     }
 
   </style>
@@ -252,7 +74,7 @@
 
 <body>
 
-  <!-- Portfolio navigation -->
+  <!-- Navigation: same structure as other portfolio project pages -->
 
   <header>
 
@@ -271,18 +93,18 @@
   </header>
 
 
-  <main class="learnais-page">
+  <main>
 
     <a class="back-link" href="/#projects">
       ← Back to Projects
     </a>
 
 
-    <!-- Project introduction -->
+    <!-- Project Introduction -->
 
-    <section class="case-section">
+    <section class="project-detail-hero">
 
-      <p class="case-eyebrow">
+      <p class="section-eyebrow">
         CS630 — Human-Computer Interaction
       </p>
 
@@ -290,58 +112,81 @@
         learnAIS: From UX Research to a Live Educational Website
       </h1>
 
-      <p class="case-lead">
-        I designed, tested, and developed an interactive
-        educational website, taking the project from initial
-        user research and interface sketches through
-        prototyping, usability testing, design revisions,
-        and front-end implementation.
+      <p class="project-lead">
+        Designing, testing, and developing an interactive
+        educational website from initial concept to
+        finished product.
       </p>
 
-      <p class="case-meta">
-
-        <strong>Project type:</strong>
-        Individual academic UX/UI and web development project
-
-        <br>
-
-        <strong>My role:</strong>
-        UX research, interface design, usability testing,
-        front-end development, and documentation
-
-        <br>
-
-        <strong>Tools and technologies:</strong>
-        Canva, HTML, CSS, JavaScript, Visual Studio Code,
-        and GitHub Pages
-
+      <p>
+        I developed learnAIS as an individual academic
+        project, working through user research, interface
+        design, prototyping, usability testing, design
+        revisions, and front-end implementation.
       </p>
 
-      <div class="case-actions">
+      <p>
+        The result is a working educational website
+        that introduces Artificial Immune Systems (AIS)
+        and bio-inspired computing through structured
+        lessons and an interactive demonstration.
+      </p>
+
+
+      <!-- Project Tags -->
+
+      <div class="project-meta">
+
+        <span class="project-tag">
+          UX/UI Design
+        </span>
+
+        <span class="project-tag">
+          User Research
+        </span>
+
+        <span class="project-tag">
+          Usability Testing
+        </span>
+
+        <span class="project-tag">
+          Front-End Development
+        </span>
+
+        <span class="project-tag">
+          Educational Technology
+        </span>
+
+      </div>
+
+
+      <!-- Primary Project Links -->
+
+      <div class="hero-actions">
 
         <a
-          class="primary"
+          class="button"
           href="https://avenpacha.github.io/learnAIS/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Explore Live Website →
+          Explore Live Website
         </a>
 
         <a
-          class="secondary"
+          class="secondary-button"
           href="#design-video"
         >
-          Watch Design Walkthrough ↓
+          Watch Design Walkthrough
         </a>
 
         <a
-          class="secondary"
+          class="secondary-button"
           href="https://github.com/avenpacha/learnAIS"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Source Code →
+          View Source Code
         </a>
 
       </div>
@@ -349,9 +194,9 @@
     </section>
 
 
-    <!-- Project overview -->
+    <!-- Project Overview -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Project Overview
@@ -375,19 +220,33 @@
 
       <p>
         Rather than beginning with the website's code,
-        I worked through the UX design process to identify
-        user needs, explore possible interfaces, create
-        prototypes, and evaluate feedback. I then used
-        those design decisions to develop the finished
-        website.
+        I worked through the UX design process to
+        identify user needs, explore possible interfaces,
+        create prototypes, and evaluate feedback.
+        I then used those design decisions to develop
+        the finished website.
       </p>
+
+      <div class="project-note">
+
+        <strong>My Role</strong>
+
+        <p>
+          UX research, user personas, wireframing,
+          interface design, Canva prototyping,
+          usability testing, design iteration,
+          HTML/CSS/JavaScript development,
+          and project documentation.
+        </p>
+
+      </div>
 
     </section>
 
 
-    <!-- UX design process -->
+    <!-- UX Design Process -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         My UX Design Process
@@ -400,13 +259,14 @@
         into a working product.
       </p>
 
-      <div class="case-process">
+      <div class="project-highlight-grid">
 
-        <div class="case-process-step">
 
-          <h3>
+        <div class="project-highlight">
+
+          <strong>
             01 — Research &amp; Define
-          </h3>
+          </strong>
 
           <p>
             Identified the target audience, educational
@@ -416,11 +276,11 @@
         </div>
 
 
-        <div class="case-process-step">
+        <div class="project-highlight">
 
-          <h3>
+          <strong>
             02 — Explore &amp; Sketch
-          </h3>
+          </strong>
 
           <p>
             Developed user personas, usage scenarios,
@@ -431,14 +291,14 @@
         </div>
 
 
-        <div class="case-process-step">
+        <div class="project-highlight">
 
-          <h3>
+          <strong>
             03 — Prototype
-          </h3>
+          </strong>
 
           <p>
-            Created an interactive mid-fidelity prototype
+            Created interactive mid-fidelity prototypes
             in Canva to explore the website's layout
             and navigation before coding.
           </p>
@@ -446,11 +306,11 @@
         </div>
 
 
-        <div class="case-process-step">
+        <div class="project-highlight">
 
-          <h3>
+          <strong>
             04 — Test &amp; Improve
-          </h3>
+          </strong>
 
           <p>
             Collected qualitative and quantitative
@@ -461,16 +321,16 @@
         </div>
 
 
-        <div class="case-process-step">
+        <div class="project-highlight">
 
-          <h3>
+          <strong>
             05 — Develop &amp; Deliver
-          </h3>
+          </strong>
 
           <p>
-            Built the educational website using HTML,
-            CSS, and JavaScript, including its lesson
-            pages, navigation, and interactive demonstration.
+            Built the website using HTML, CSS,
+            and JavaScript, including its lesson pages,
+            navigation, and interactive demonstration.
           </p>
 
         </div>
@@ -480,9 +340,9 @@
     </section>
 
 
-    <!-- User research -->
+    <!-- Understanding the Users -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Understanding the Users
@@ -490,9 +350,10 @@
 
       <p>
         I began by considering the needs of students
-        learning about bio-inspired algorithms. I also
-        explored how users with different technical
-        backgrounds might approach the website.
+        learning about bio-inspired algorithms.
+        I also explored how users with different
+        technical backgrounds might approach
+        the website.
       </p>
 
       <p>
@@ -504,16 +365,14 @@
       <p>
         This process informed an important design
         decision: the website needed to support both
-        guided learning for beginners and direct access
-        to individual topics for returning or
-        more experienced users.
+        guided learning for beginners and direct
+        access to individual topics for returning
+        or more experienced users.
       </p>
 
-      <div class="case-highlight">
+      <div class="project-note">
 
-        <h3>
-          Design Goal
-        </h3>
+        <strong>Design Goal</strong>
 
         <p>
           Make a complex technical topic approachable
@@ -526,9 +385,9 @@
     </section>
 
 
-    <!-- Low-fidelity wireframes -->
+    <!-- Low-Fidelity Wireframes -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Exploring Initial Design Concepts
@@ -537,11 +396,11 @@
       <p>
         Before creating a digital prototype, I sketched
         three low-fidelity interface concepts to explore
-        different ways of organizing the website's content
-        and navigation.
+        different ways of organizing the website's
+        content and navigation.
       </p>
 
-      <figure class="case-figure">
+      <figure class="learnais-wireframes">
 
         <img
           src="/assets/images/learnais-wireframes.png"
@@ -557,6 +416,7 @@
         </figcaption>
 
       </figure>
+
 
       <h3>
         Selecting a Design Direction
@@ -579,10 +439,10 @@
     </section>
 
 
-    <!-- Mid-fidelity prototype video -->
+    <!-- Mid-Fidelity Prototypes and Design Walkthrough -->
 
     <section
-      class="case-section"
+      class="project-section"
       id="design-video"
     >
 
@@ -594,16 +454,24 @@
         I used Canva to develop interactive mid-fidelity
         prototypes before implementing the website in code.
         The initial prototype allowed me to test how users
-        started the course, moved between lessons, and
-        navigated directly to different sections.
+        started the course, moved between lessons,
+        and navigated directly to different sections.
       </p>
 
+      <h3>
+        Prototype A — Initial Design
+      </h3>
+
       <p>
-        In Prototype A, users could select individual
-        lessons from the homepage or click Start the Course,
-        which took them directly to the first lesson,
-        What Is AIS?
+        In my initial prototype, users could select
+        individual lessons from the homepage or click
+        Start the Course, which took them directly
+        to the first lesson, What Is AIS?
       </p>
+
+      <h3>
+        Prototype B — Revised Design
+      </h3>
 
       <p>
         During usability testing, all four participants
@@ -613,7 +481,7 @@
       </p>
 
       <p>
-        In Prototype B, I added an About the Course page
+        In response, I added an About the Course page
         outlining the lessons and updated the
         Start the Course button to take users
         to that overview first.
@@ -625,16 +493,10 @@
         as the main starting point.
       </p>
 
-      <p>
-        The video below demonstrates these navigation
-        changes and shows how the revised design
-        was incorporated into the finished website.
-      </p>
 
+      <!-- Embedded YouTube Walkthrough -->
 
-      <!-- Responsive YouTube embed -->
-
-      <div class="case-video">
+      <div class="learnais-video">
 
         <iframe
           src="https://www.youtube.com/embed/xM8_Xs0dGSY"
@@ -647,13 +509,13 @@
 
       </div>
 
-      <p class="case-video-caption">
+      <p class="learnais-video-caption">
         <strong>Before and after:</strong>
         A walkthrough of the initial and revised
         mid-fidelity prototypes, showing how usability
-        feedback informed changes to the course navigation
-        and how I made the primary Start the Course
-        button more prominent.
+        feedback informed the navigation changes
+        and how I made the main Start the Course
+        button more visually prominent.
       </p>
 
       <p>
@@ -671,9 +533,9 @@
     </section>
 
 
-    <!-- Usability testing -->
+    <!-- Usability Testing -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Usability Testing &amp; Feedback
@@ -703,33 +565,55 @@
         a specific opportunity to improve the experience.
       </p>
 
-      <div class="case-highlight">
 
-        <h3>
-          From User Feedback to a Design Decision
-        </h3>
+      <!-- Feedback-to-Design Highlights -->
 
-        <p>
-          <strong>What I learned:</strong>
-          Users could navigate the course, but they
-          wanted a better understanding of what
-          to expect before beginning.
-        </p>
+      <div class="project-highlight-grid">
 
-        <p>
-          <strong>What I changed:</strong>
-          I added an About the Course page and
-          changed the Start the Course button
-          to open that overview first.
-        </p>
+        <div class="project-highlight">
 
-        <p>
-          <strong>Why I chose this approach:</strong>
-          The new page gives users a clearer
-          understanding of the lesson sequence
-          without adding a progress bar or
-          unnecessary visual complexity.
-        </p>
+          <strong>
+            What I Learned
+          </strong>
+
+          <p>
+            Users could navigate the course, but they
+            wanted a better understanding of what
+            to expect before beginning.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            What I Changed
+          </strong>
+
+          <p>
+            I added an About the Course page and
+            changed the Start the Course button
+            to open that overview first.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Why I Chose This Approach
+          </strong>
+
+          <p>
+            The new page provides an overview of
+            the lesson sequence without adding
+            a progress bar or unnecessary
+            visual complexity.
+          </p>
+
+        </div>
 
       </div>
 
@@ -740,27 +624,33 @@
         the finished website.
       </p>
 
-      <p>
-        The participant feedback came from testing
-        the initial mid-fidelity prototype. The revised
-        prototype and completed website were not
-        separately evaluated with the same participants
-        as part of this documented testing.
-      </p>
+      <div class="project-note">
+
+        <strong>Testing Scope</strong>
+
+        <p>
+          The participant feedback came from testing
+          the initial mid-fidelity prototype.
+          The revised prototype and completed website
+          were not separately evaluated with the same
+          participants as part of this documented testing.
+        </p>
+
+      </div>
 
     </section>
 
 
-    <!-- Front-end development -->
+    <!-- Front-End Development -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         From Prototype to Working Website
       </h2>
 
       <p>
-        After working through the design and evaluation
+        After completing the design and evaluation
         stages, I implemented learnAIS using HTML,
         CSS, and JavaScript in Visual Studio Code.
       </p>
@@ -772,70 +662,76 @@
         to support the educational experience.
       </p>
 
-      <div class="case-card">
 
-        <h3>
-          HTML — Website Structure
-        </h3>
+      <div class="project-highlight-grid">
 
-        <p>
-          Built the individual pages and organized
-          educational content into a sequence of lessons
-          with consistent navigation between sections.
-        </p>
+
+        <div class="project-highlight">
+
+          <strong>
+            HTML — Website Structure
+          </strong>
+
+          <p>
+            Built the individual pages and organized
+            educational content into a sequence
+            of lessons with consistent navigation.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            CSS — Interface Design
+          </strong>
+
+          <p>
+            Implemented page layouts, typography,
+            spacing, navigation, and consistent
+            styling across the website.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            JavaScript — Interactivity
+          </strong>
+
+          <p>
+            Developed an interactive demonstration
+            that allows users to adjust algorithm
+            parameters and view dynamically
+            updated explanations and output.
+          </p>
+
+        </div>
 
       </div>
 
 
-      <div class="case-card">
-
-        <h3>
-          CSS — Interface Design
-        </h3>
-
-        <p>
-          Implemented the website's visual design,
-          including page layouts, typography,
-          spacing, navigation, and consistent
-          styling across the learning experience.
-        </p>
-
-      </div>
-
-
-      <div class="case-card">
-
-        <h3>
-          JavaScript — Interactivity
-        </h3>
-
-        <p>
-          Developed an interactive demonstration
-          that allows users to adjust algorithm
-          parameters and view dynamically
-          updated explanations and output.
-        </p>
-
-      </div>
-
-      <div class="case-actions">
+      <div class="hero-actions">
 
         <a
-          class="primary"
+          class="button"
           href="https://avenpacha.github.io/learnAIS/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Explore the Finished Website →
+          Explore the Finished Website
         </a>
 
         <a
-          class="secondary"
+          class="secondary-button"
           href="https://github.com/avenpacha/learnAIS"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Review the Source Code →
+          Review the Source Code
         </a>
 
       </div>
@@ -843,83 +739,82 @@
     </section>
 
 
-    <!-- Professional skills -->
+    <!-- Professional Skills -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         What This Project Demonstrates
       </h2>
 
-
-      <div class="case-card">
-
-        <h3>
-          End-to-End UX/UI Design
-        </h3>
-
-        <p>
-          I worked through the complete project process,
-          from identifying user needs and exploring
-          design concepts to prototyping, usability
-          testing, revisions, and implementation.
-        </p>
-
-      </div>
+      <div class="project-highlight-grid">
 
 
-      <div class="case-card">
+        <div class="project-highlight">
 
-        <h3>
-          User-Centered Decision-Making
-        </h3>
+          <strong>
+            End-to-End UX/UI Design
+          </strong>
 
-        <p>
-          I collected and analyzed feedback to identify
-          a recurring usability issue, then translated
-          that finding into a targeted navigation change.
-        </p>
+          <p>
+            I worked from identifying user needs
+            and exploring design concepts through
+            prototyping, usability testing, design
+            revisions, and implementation.
+          </p>
 
-      </div>
-
-
-      <div class="case-card">
-
-        <h3>
-          Front-End Development
-        </h3>
-
-        <p>
-          I translated the design into a functioning
-          educational website using HTML, CSS,
-          and JavaScript, including interactive features
-          that support the site's learning objectives.
-        </p>
-
-      </div>
+        </div>
 
 
-      <div class="case-card">
+        <div class="project-highlight">
 
-        <h3>
-          Communication &amp; Documentation
-        </h3>
+          <strong>
+            User-Centered Decision-Making
+          </strong>
 
-        <p>
-          I documented the design process,
-          evaluation methods, participant feedback,
-          implementation decisions, and opportunities
-          for future improvements.
-        </p>
+          <p>
+            I analyzed participant feedback to identify
+            a recurring usability issue and translated
+            that finding into a targeted navigation change.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Front-End Development
+          </strong>
+
+          <p>
+            I translated the design into a functioning
+            educational website using HTML, CSS,
+            and JavaScript, including interactive
+            learning features.
+          </p>
+
+        </div>
 
       </div>
+
+      <h3>
+        Communication &amp; Documentation
+      </h3>
+
+      <p>
+        I documented the project's design process,
+        evaluation methods, participant feedback,
+        implementation decisions, and opportunities
+        for future improvement.
+      </p>
 
     </section>
 
 
     <!-- Reflection -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Reflection &amp; Future Improvements
@@ -927,11 +822,11 @@
 
       <p>
         This project helped me connect UX/UI design
-        with front-end development. I gained
-        experience evaluating a design before coding,
-        making decisions based on user feedback,
-        and turning a revised prototype into
-        a working educational website.
+        with front-end development. I gained experience
+        evaluating a design before coding, making
+        decisions based on user feedback, and turning
+        a revised prototype into a working
+        educational website.
       </p>
 
       <p>
@@ -953,50 +848,50 @@
     </section>
 
 
-    <!-- Skills -->
+    <!-- Skills and Technologies -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Skills &amp; Technologies
       </h2>
 
-      <div class="case-skills">
+      <div class="skills">
 
-        <span>UX Research</span>
+        <span class="skill">UX Research</span>
 
-        <span>User Personas</span>
+        <span class="skill">User Personas</span>
 
-        <span>User Flows</span>
+        <span class="skill">User Flows</span>
 
-        <span>Low-Fidelity Wireframing</span>
+        <span class="skill">Low-Fidelity Wireframing</span>
 
-        <span>Mid-Fidelity Prototyping</span>
+        <span class="skill">Mid-Fidelity Prototyping</span>
 
-        <span>Canva</span>
+        <span class="skill">Canva</span>
 
-        <span>Usability Testing</span>
+        <span class="skill">Usability Testing</span>
 
-        <span>Design Iteration</span>
+        <span class="skill">Design Iteration</span>
 
-        <span>HTML</span>
+        <span class="skill">HTML</span>
 
-        <span>CSS</span>
+        <span class="skill">CSS</span>
 
-        <span>JavaScript</span>
+        <span class="skill">JavaScript</span>
 
-        <span>Front-End Development</span>
+        <span class="skill">Front-End Development</span>
 
-        <span>Educational Technology</span>
+        <span class="skill">Educational Technology</span>
 
       </div>
 
     </section>
 
 
-    <!-- Project materials -->
+    <!-- Project Materials -->
 
-    <section class="case-section">
+    <section class="project-section">
 
       <h2>
         Project Materials
@@ -1008,33 +903,33 @@
         of the design revisions.
       </p>
 
-      <div class="case-actions">
+      <div class="hero-actions">
 
         <a
-          class="primary"
+          class="button"
           href="https://avenpacha.github.io/learnAIS/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Live Website →
+          Explore Live Website
         </a>
 
         <a
-          class="secondary"
+          class="secondary-button"
           href="https://github.com/avenpacha/learnAIS"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub Repository →
+          View GitHub Repository
         </a>
 
         <a
-          class="secondary"
+          class="secondary-button"
           href="https://www.youtube.com/watch?v=xM8_Xs0dGSY"
           target="_blank"
           rel="noopener noreferrer"
         >
-          UX Design Walkthrough →
+          Watch UX Design Walkthrough
         </a>
 
       </div>
