@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Aven Pacha Pinto's Study Abroad Budget Calculator and Advising Platform, originally developed as a CS640 Advanced Database Systems final project and later expanded into a deployed full-stack educational technology application."
+  >
+
+  <title>
+    Study Abroad Budget Calculator & Advising Platform | Aven Pacha Pinto
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <!-- Portfolio Navigation -->
+
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#credentials">Credentials</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <a class="back-link" href="/#projects">
+      ← Back to Projects
+    </a>
+
+    <!-- Project Introduction -->
+
+    <section class="project-detail-hero">
+
+      <p class="section-eyebrow">
+        CS640 — Advanced Database Systems
+      </p>
+
+      <h1>
+        Study Abroad Budget Calculator &amp; Advising Platform
+      </h1>
+
+      <p class="project-lead">
+        A full-stack web application designed to help
+        students estimate study abroad costs, compare
+        programs, and prepare for advising conversations.
+      </p>
+
+      <p>
+        This application was initiated as my group's
+        final project for CS640 Advanced Database Systems.
+        We developed a database-backed web application
+        using Python Flask and MySQL to manage study abroad
+        program, student, and budget information.
+      </p>
+
+      <p>
+        After the course ended, I continued developing
+        the project independently, expanding the original
+        database application into a more complete
+        student-facing and advising-focused platform
+        that I could deploy as part of my portfolio.
+      </p>
+
+      <div class="project-meta">
+
+        <span class="project-tag">
+          Python
+        </span>
+
+        <span class="project-tag">
+          Flask
+        </span>
+
+        <span class="project-tag">
+          MySQL
+        </span>
+
+        <span class="project-tag">
+          SQL
+        </span>
+
+        <span class="project-tag">
+          JavaScript
+        </span>
+
+        <span class="project-tag">
+          Full-Stack Development
+        </span>
+
+        <span class="project-tag">
+          Educational Technology
+        </span>
+
+      </div>
+
+      <p>
+        <strong>Project origin:</strong>
+        Group final project for CS640 — Advanced Database Systems
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="button"
+          href="https://study-abroad-budget-calculator-demo.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Live Demo
+        </a>
+
+        <a
+          class="secondary-button"
+          href="#my-contributions"
+        >
+          View My Contributions
+        </a>
+
+        <a
+          class="secondary-button"
+          href="#architecture"
+        >
+          Explore Architecture
+        </a>
+
+      </div>
+
+      <p>
+        <small>
+          The application is hosted on Render and may
+          take a short moment to load after a period
+          of inactivity.
+        </small>
+      </p>
+
+    </section>
+
+    <!-- Project Background -->
+
+    <section class="project-section">
+
+      <h2>
+        From CS640 Final Project to Portfolio Application
+      </h2>
+
+      <p>
+        The Study Abroad Budget Calculator began as
+        the final group project for my Advanced
+        Database Systems course.
+      </p>
+
+      <p>
+        The original project focused on applying
+        relational database concepts through a
+        practical web application. Our group used
+        MySQL as the database layer and Python Flask
+        to connect the database to a browser-based
+        interface.
+      </p>
+
+      <p>
+        The application provided functionality for
+        managing students, study abroad programs,
+        budgets, destination costs, tuition information,
+        and other related records through an
+        interconnected relational database.
+      </p>
+
+      <p>
+        After completing the course assignment,
+        I decided to continue working on the project.
+        Because of my previous professional experience
+        in study abroad, I saw an opportunity to turn
+        the academic database project into a more
+        realistic tool for student financial planning
+        and advising.
+      </p>
+
+      <div class="project-note">
+
+        <strong>Why I Continued the Project</strong>
+
+        <p>
+          The original assignment gave me a strong
+          database foundation, but I wanted to explore
+          what the system could become when designed
+          around the actual needs of students and
+          study abroad advisors.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Problem -->
+
+    <section class="project-section">
+
+      <h2>
+        The Problem
+      </h2>
+
+      <p>
+        Comparing study abroad programs can be difficult
+        because the total cost extends beyond a single
+        program fee. Students may need to consider
+        tuition, housing, meals, airfare, transportation,
+        living expenses, and other destination-specific
+        costs.
+      </p>
+
+      <p>
+        Those estimates can also depend on the
+        student's individual circumstances and
+        program choices.
+      </p>
+
+      <p>
+        I wanted the application to organize this
+        information in a way that helps students
+        make comparisons while also creating useful
+        context for future advising conversations.
+      </p>
+
+    </section>
+
+    <!-- Database Foundation -->
+
+    <section
+      class="project-section"
+      id="architecture"
+    >
+
+      <h2>
+        Database &amp; Application Architecture
+      </h2>
+
+      <p>
+        The original CS640 project was designed
+        around a relational MySQL database connected
+        to a Python Flask application.
+      </p>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            Relational Database
+          </strong>
+
+          <p>
+            MySQL stores interconnected information
+            about students, programs, budgets,
+            destination costs, tuition rates,
+            and related program data.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Flask Application Layer
+          </strong>
+
+          <p>
+            Python Flask connects the browser
+            interface to the database and handles
+            application logic, routes, validation,
+            and data operations.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Browser Interface
+          </strong>
+
+          <p>
+            HTML, CSS, and JavaScript provide
+            the student and administrator
+            interfaces used to interact with
+            the underlying application.
+          </p>
+
+        </div>
+
+      </div>
+
+      <h3>
+        Relational Design
+      </h3>
+
+      <p>
+        The database was designed using related
+        tables and foreign-key relationships rather
+        than storing all application information
+        in a single table.
+      </p>
+
+      <p>
+        Constraints and validation help preserve
+        referential integrity and keep data
+        consistent as records are created,
+        retrieved, and updated.
+      </p>
+
+      <h3>
+        API and Database Operations
+      </h3>
+
+      <p>
+        The Flask application processes requests
+        and exchanges structured data with the
+        database. JSON data from application
+        requests is validated and processed before
+        being used in SQL operations.
+      </p>
+
+      <p>
+        This gave me hands-on experience connecting
+        front-end interactions, application logic,
+        and relational database operations within
+        the same system.
+      </p>
+
+    </section>
+
+    <!-- Original Course Project -->
+
+    <section class="project-section">
+
+      <h2>
+        Original CS640 Project
+      </h2>
+
+      <p>
+        The course project centered on demonstrating
+        advanced database concepts through a working
+        study abroad budgeting application.
+      </p>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            Database Design
+          </strong>
+
+          <p>
+            Designed interconnected relational tables
+            with primary keys, foreign keys,
+            constraints, and structured relationships.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            CRUD Operations
+          </strong>
+
+          <p>
+            Application functionality supported
+            creating, retrieving, updating,
+            and managing database-backed records.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Validation &amp; Integrity
+          </strong>
+
+          <p>
+            Database and application validation
+            helped maintain consistent data
+            and enforce relationships between
+            records.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Flask Integration
+          </strong>
+
+          <p>
+            Connected MySQL data to a web
+            application using Python Flask
+            and structured API requests.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Testing &amp; Debugging
+          </strong>
+
+          <p>
+            Tested application behavior,
+            troubleshot database interactions,
+            and debugged issues across
+            different parts of the system.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Technical Presentation
+          </strong>
+
+          <p>
+            Presented the completed project
+            to my professor and graduate
+            Computer Science classmates
+            on behalf of the group.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Current Version -->
+
+    <section class="project-section">
+
+      <h2>
+        Expanding the Project Beyond the Course
+      </h2>
+
+      <p>
+        After CS640, I continued developing the
+        application independently rather than
+        leaving it as a completed classroom project.
+      </p>
+
+      <p>
+        My goal shifted from demonstrating database
+        functionality to creating a more complete
+        application that reflects how students and
+        advisors might actually use a study abroad
+        budgeting system.
+      </p>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            Student Planning Experience
+          </strong>
+
+          <p>
+            Expanded the application to collect
+            information relevant to a student's
+            study abroad plans and budgeting needs.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Program Search
+          </strong>
+
+          <p>
+            Improved how students explore
+            available programs and filter options
+            based on relevant program attributes.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Program Comparisons
+          </strong>
+
+          <p>
+            Expanded the budgeting workflow so
+            students can save and compare multiple
+            study abroad options and their
+            estimated costs.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Term-Specific Program Data
+          </strong>
+
+          <p>
+            Extended the data model to better
+            represent program offerings,
+            deadlines, and costs that can vary
+            by academic term.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Advising Workflows
+          </strong>
+
+          <p>
+            Added functionality that organizes
+            student planning information in ways
+            that can support future advising
+            conversations.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Public Portfolio Demo
+          </strong>
+
+          <p>
+            Prepared and deployed an employer-facing
+            version that demonstrates application
+            workflows without exposing real
+            student information.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- My Contributions -->
+
+    <section
+      class="project-section"
+      id="my-contributions"
+    >
+
+      <h2>
+        My Role &amp; Contributions
+      </h2>
+
+      <p>
+        Because this project began as collaborative
+        coursework and later became an application
+        I continued independently, I separate my
+        contributions into two stages.
+      </p>
+
+      <h3>
+        During the CS640 Group Project
+      </h3>
+
+      <p>
+        I helped develop the Study Abroad Budget
+        Calculator using Python Flask and MySQL.
+        My work included database and application
+        development, SQL, testing, integration,
+        debugging, and troubleshooting how data
+        moved between the application and database.
+      </p>
+
+      <p>
+        I also represented my group during the
+        final project presentation to our professor
+        and graduate Computer Science classmates.
+      </p>
+
+      <h3>
+        Independent Development After CS640
+      </h3>
+
+      <p>
+        After the course, I continued building on
+        the original application myself. I expanded
+        the student experience, program data,
+        comparison workflows, advising functionality,
+        and deployment configuration while continuing
+        to test and debug the application.
+      </p>
+
+      <p>
+        This later work allowed me to move beyond
+        the requirements of the original database
+        assignment and think more broadly about
+        user experience, application architecture,
+        data management, and deployment.
+      </p>
+
+    </section>
+
+    <!-- Public Demo -->
+
+    <section class="project-section">
+
+      <h2>
+        Employer-Facing Demo
+      </h2>
+
+      <p>
+        I deployed a public version of the application
+        so employers can explore the project without
+        requiring access to the private source-code
+        repository.
+      </p>
+
+      <p>
+        The portfolio experience uses fictional
+        information and is designed to demonstrate
+        the application's workflows without exposing
+        real student records or unrestricted
+        administrative access.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="button"
+          href="https://study-abroad-budget-calculator-demo.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Launch Live Demo
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section class="project-section">
+
+      <h2>
+        Skills &amp; Technologies
+      </h2>
+
+      <div class="skills">
+
+        <span class="skill">Python</span>
+
+        <span class="skill">Flask</span>
+
+        <span class="skill">MySQL</span>
+
+        <span class="skill">SQL</span>
+
+        <span class="skill">Relational Databases</span>
+
+        <span class="skill">Database Design</span>
+
+        <span class="skill">REST APIs</span>
+
+        <span class="skill">JSON</span>
+
+        <span class="skill">HTML</span>
+
+        <span class="skill">CSS</span>
+
+        <span class="skill">JavaScript</span>
+
+        <span class="skill">Data Validation</span>
+
+        <span class="skill">Testing &amp; Debugging</span>
+
+        <span class="skill">Full-Stack Development</span>
+
+        <span class="skill">Web Deployment</span>
+
+        <span class="skill">Educational Technology</span>
+
+      </div>
+
+    </section>
+
+    <!-- What This Demonstrates -->
+
+    <section class="project-section">
+
+      <h2>
+        What This Project Demonstrates
+      </h2>
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            Database Development
+          </strong>
+
+          <p>
+            Experience designing and working
+            with relational data structures,
+            SQL queries, constraints,
+            and application integrations.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Full-Stack Development
+          </strong>
+
+          <p>
+            Experience connecting a browser
+            interface, Flask application logic,
+            API data, and a MySQL database.
+          </p>
+
+        </div>
+
+        <div class="project-highlight">
+
+          <strong>
+            Domain-Informed Design
+          </strong>
+
+          <p>
+            Applied my professional understanding
+            of study abroad advising to decisions
+            about student workflows and
+            application functionality.
+          </p>
+
+        </div>
+
+      </div>
+
+      <h3>
+        Continued Learning
+      </h3>
+
+      <p>
+        Continuing the project after the course
+        gave me experience taking an academic
+        application beyond its original requirements.
+        I had to revisit earlier design decisions,
+        expand the database and application logic,
+        test new functionality, and prepare the
+        system for public deployment.
+      </p>
+
+    </section>
+
+    <!-- Source Code -->
+
+    <section class="project-section">
+
+      <h2>
+        Source Code
+      </h2>
+
+      <p>
+        The current application source code is
+        maintained in a private GitHub repository.
+        The deployed portfolio demo is publicly
+        available so employers can evaluate
+        the application's functionality and
+        user experience.
+      </p>
+
+    </section>
+
+    <!-- Explore Project -->
+
+    <section class="project-section">
+
+      <h2>
+        Explore the Project
+      </h2>
+
+      <p>
+        Explore the deployed application to see
+        the study abroad budgeting, program
+        comparison, and advising workflows.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="button"
+          href="https://study-abroad-budget-calculator-demo.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Live Demo
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
