@@ -21,30 +21,33 @@
 
   <link rel="stylesheet" href="/styles.css">
 
-  <!-- Project-specific styling for feature screenshots -->
+
+  <!-- Project-specific screenshot and case study styling -->
 
   <style>
 
     .feature-showcase {
       display: grid;
-      gap: 48px;
+      gap: 52px;
       margin-top: 32px;
     }
 
     .feature-showcase-item {
       display: grid;
       grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(280px, 0.75fr);
+        minmax(0, 1.2fr)
+        minmax(280px, 0.8fr);
       gap: 34px;
       align-items: center;
     }
 
-    .feature-showcase-item:nth-child(even) .feature-image {
+    .feature-showcase-item:nth-child(even) .feature-media {
       order: 2;
     }
 
-    .feature-image img {
+    .feature-media img,
+    .feature-image-pair img,
+    .workflow-gallery img {
       width: 100%;
       height: auto;
 
@@ -52,6 +55,28 @@
       border-radius: 12px;
 
       box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+
+    .feature-media figure,
+    .feature-image-pair figure,
+    .workflow-gallery figure {
+      margin: 0;
+    }
+
+    .feature-media figcaption,
+    .feature-image-pair figcaption,
+    .workflow-gallery figcaption {
+      margin-top: 8px;
+
+      color: #64748b;
+
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .feature-image-pair {
+      display: grid;
+      gap: 18px;
     }
 
     .feature-copy h3 {
@@ -72,6 +97,36 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    .workflow-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+
+      margin: 28px 0;
+    }
+
+    .workflow-step {
+      margin-top: 26px;
+      padding: 22px;
+
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+    }
+
+    .workflow-step strong {
+      display: block;
+      margin-bottom: 8px;
+
+      color: #111827;
+    }
+
+    .workflow-step p {
+      margin-bottom: 0;
+      color: #4b5563;
     }
 
     .cloud-flow {
@@ -98,10 +153,19 @@
       color: #111827;
     }
 
+    @media (max-width: 850px) {
+
+      .workflow-gallery {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+    }
+
     @media (max-width: 750px) {
 
       .feature-showcase {
-        gap: 38px;
+        gap: 42px;
       }
 
       .feature-showcase-item {
@@ -109,7 +173,7 @@
         gap: 20px;
       }
 
-      .feature-showcase-item:nth-child(even) .feature-image {
+      .feature-showcase-item:nth-child(even) .feature-media {
         order: 0;
       }
 
@@ -172,25 +236,25 @@
       </h1>
 
       <p class="project-lead">
-        A full-stack web application that helps students
-        estimate study abroad costs, compare program options,
-        and prepare for advising conversations.
+        A full-stack web application that connects
+        student financial planning with study abroad
+        advising and administrative workflows.
       </p>
 
       <p>
         This application began as my group's final project
         for CS640 Advanced Database Systems. We developed
-        a database-backed application using Python Flask
-        and MySQL to manage study abroad program,
-        student, and budget information.
+        a database-backed web application using Python
+        Flask and MySQL to manage study abroad program,
+        student, budget, and cost information.
       </p>
 
       <p>
         After the course ended, I continued developing
-        the project independently, expanding the original
-        database application into a more complete
-        student-planning and advising platform
-        that I could deploy as part of my portfolio.
+        the project independently, expanding it into
+        a more complete platform designed around both
+        the student planning experience and the
+        administrative needs of study abroad offices.
       </p>
 
 
@@ -244,16 +308,16 @@
 
         <a
           class="secondary-button"
-          href="#features"
+          href="#student-experience"
         >
-          Explore Key Features
+          Student Experience
         </a>
 
         <a
           class="secondary-button"
-          href="#my-contributions"
+          href="#advisor-experience"
         >
-          View My Contributions
+          Advisor Experience
         </a>
 
       </div>
@@ -297,64 +361,70 @@
       </p>
 
       <p>
-        My previous experience working in study abroad
-        also gave me firsthand knowledge of the problem
-        the application addresses. Students often need
-        to consider much more than a single program fee,
-        while advisors need enough context to help them
-        compare realistic options.
+        My previous professional experience in study
+        abroad gave me a real-world perspective on
+        the problem. Students need help understanding
+        the complete financial picture of different
+        programs, while advisors need organized
+        information that can support meaningful
+        planning conversations.
       </p>
 
       <p>
-        After CS640, I continued developing the project
-        independently with greater attention to student
-        workflows, advising needs, user experience,
-        and cloud deployment.
+        I continued developing the application after
+        CS640 with greater attention to those real
+        workflows, as well as user experience,
+        administration, testing, and deployment.
       </p>
 
     </section>
 
 
-    <!-- Key Features -->
+    <!-- Student Experience -->
 
     <section
       class="project-section"
-      id="features"
+      id="student-experience"
     >
 
       <h2>
-        Key Features &amp; Design Decisions
+        Student Planning Experience
       </h2>
 
       <p>
-        As I expanded the application, I focused on
-        how database functionality could support
-        real study abroad decisions while keeping
-        complex information understandable for users.
-      </p>
-
-      <p>
-        These features illustrate how I approached
-        the application from both a study abroad
-        administration perspective and a
-        human-computer interaction perspective.
+        The student side is designed to turn a complex
+        planning process into a guided sequence of
+        smaller decisions. Rather than treating study
+        abroad budgeting as a single calculation,
+        the application connects student preferences,
+        program information, travel costs, and
+        financial estimates.
       </p>
 
 
       <div class="feature-showcase">
 
 
-        <!-- Guided Questionnaire -->
+        <!-- Questionnaire -->
 
         <div class="feature-showcase-item">
 
-          <div class="feature-image">
+          <div class="feature-media">
 
-            <img
-              src="/assets/images/study-abroad-questionnaire.png"
-              alt="Guided student questionnaire in the Study Abroad Budget Calculator"
-              loading="lazy"
-            >
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-questionnaire.png"
+                alt="Guided student questionnaire in the Study Abroad Budget Calculator"
+                loading="lazy"
+              >
+
+              <figcaption>
+                The guided questionnaire collects
+                planning information one step at a time.
+              </figcaption>
+
+            </figure>
 
           </div>
 
@@ -379,17 +449,17 @@
             <p>
               From an advising perspective, this creates
               a more structured student profile and
-              collects information that may be useful
-              later when discussing program fit,
-              preferences, and costs.
+              captures information that can later support
+              conversations about program fit,
+              preferences, and affordability.
             </p>
 
             <p>
-              From a user-experience perspective,
-              breaking the process into smaller steps
-              reduces the amount of information users
-              need to process at one time and gives
-              them a clearer sense of progression.
+              From an HCI perspective, breaking the
+              process into smaller steps reduces the
+              amount of information users need to
+              process at one time and provides a
+              clearer sense of progression.
             </p>
 
           </div>
@@ -401,13 +471,40 @@
 
         <div class="feature-showcase-item">
 
-          <div class="feature-image">
+          <div class="feature-media feature-image-pair">
 
-            <img
-              src="/assets/images/study-abroad-program-comparison.png"
-              alt="Study abroad program comparison interface showing multiple program options"
-              loading="lazy"
-            >
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-program-comparison.png"
+                alt="Questionnaire screen where a student selects study abroad programs to compare"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Step 1: The student selects the
+                programs they want to compare.
+              </figcaption>
+
+            </figure>
+
+
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-program-comparison-result.png"
+                alt="Comparison results for two spring break study abroad programs showing dates, estimated costs, and flight pricing"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Step 2: The application brings
+                the selected programs together
+                and incorporates airfare for
+                the chosen travel dates.
+              </figcaption>
+
+            </figure>
 
           </div>
 
@@ -419,31 +516,40 @@
             </p>
 
             <h3>
-              Program Search &amp; Comparison
+              Program Comparison &amp; Date-Specific Airfare
             </h3>
 
             <p>
-              Students can explore program options
-              and compare multiple choices using
-              a consistent set of information.
+              Students can select multiple programs
+              and evaluate them together rather than
+              trying to remember information from
+              separate program pages.
             </p>
 
             <p>
-              In study abroad advising, students may
-              need to compare programs across different
-              countries, academic terms, providers,
-              institutions, and cost structures.
-              Bringing that information together makes
-              those differences easier to evaluate.
+              In this example, two spring break
+              programs are selected. Because airfare
+              can represent a meaningful part of
+              the total cost of a short-term program,
+              students can select travel dates and
+              incorporate current Google Flights
+              pricing into the comparison.
             </p>
 
             <p>
-              The interface is designed to support
-              comparison rather than requiring users
-              to remember information from several
-              separate pages. This reduces cognitive
-              load and supports more informed
-              decision-making.
+              From a study abroad planning perspective,
+              this creates a more realistic comparison
+              than looking only at published program fees.
+            </p>
+
+            <p>
+              From an HCI perspective, the workflow
+              moves from a simple selection task to
+              a consolidated result. The application
+              handles the underlying data retrieval
+              and calculations while presenting
+              information around the decision the
+              student is trying to make.
             </p>
 
           </div>
@@ -455,13 +561,23 @@
 
         <div class="feature-showcase-item">
 
-          <div class="feature-image">
+          <div class="feature-media">
 
-            <img
-              src="/assets/images/study-abroad-budget-breakdown.png"
-              alt="Study abroad budget estimate organized into multiple cost categories"
-              loading="lazy"
-            >
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-budget-breakdown.png"
+                alt="Study abroad budget estimate organized into multiple cost categories"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Estimated costs are organized into
+                categories so students can understand
+                how the total is constructed.
+              </figcaption>
+
+            </figure>
 
           </div>
 
@@ -478,17 +594,17 @@
 
             <p>
               The application organizes study abroad
-              costs into understandable categories
-              rather than presenting students with
+              expenses into understandable categories
+              instead of presenting students with
               only one total.
             </p>
 
             <p>
               This reflects an important part of
-              study abroad planning: the advertised
+              study abroad advising: the advertised
               program price may not represent the
               student's full financial commitment.
-              Housing, transportation, airfare,
+              Airfare, transportation, housing,
               living expenses, and other costs
               can all affect affordability.
             </p>
@@ -496,7 +612,7 @@
             <p>
               Showing how an estimate is constructed
               makes the result easier to understand
-              and gives students more context for
+              and gives students better context for
               planning and advising conversations.
             </p>
 
@@ -504,18 +620,66 @@
 
         </div>
 
+      </div>
 
-        <!-- Advising Profile -->
+    </section>
+
+
+    <!-- Advisor and Administrator Experience -->
+
+    <section
+      class="project-section"
+      id="advisor-experience"
+    >
+
+      <h2>
+        Advisor &amp; Administrator Experience
+      </h2>
+
+      <p>
+        I also wanted the application to reflect the
+        administrative side of study abroad. Student
+        planning tools are more useful when advisors
+        can review relevant information, maintain
+        institutional costs, and manage program data
+        in the same system.
+      </p>
+
+      <p>
+        These features were designed around the idea
+        that students and administrators may use the
+        same underlying information differently.
+        Students need guidance and comparison tools,
+        while staff need concise records and
+        workflows that support advising and
+        program administration.
+      </p>
+
+
+      <div class="feature-showcase">
+
+
+        <!-- Admin Dashboard -->
 
         <div class="feature-showcase-item">
 
-          <div class="feature-image">
+          <div class="feature-media">
 
-            <img
-              src="/assets/images/study-abroad-advising-profile.png"
-              alt="Advising profile displaying student study abroad planning information"
-              loading="lazy"
-            >
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-admin-dashboard.png"
+                alt="Administrator dashboard for the Study Abroad Budget Calculator"
+                loading="lazy"
+              >
+
+              <figcaption>
+                The administrator dashboard provides
+                a central starting point for the
+                staff-facing side of the application.
+              </figcaption>
+
+            </figure>
 
           </div>
 
@@ -523,40 +687,341 @@
           <div class="feature-copy">
 
             <p class="feature-label">
-              Study Abroad Administration
+              Administration
             </p>
 
             <h3>
-              Advising Profiles
+              Central Advisor Dashboard
             </h3>
 
             <p>
-              Student planning information can also
-              be organized into an advising-oriented
-              view.
+              The administrator dashboard brings
+              together the main staff-facing
+              functions in one location.
             </p>
 
             <p>
-              From an administrative perspective,
-              this creates continuity between what
-              a student researches independently
-              and what an advisor may need to review
-              during a meeting.
+              From a study abroad administration
+              perspective, this reduces the need
+              to manage student information,
+              program costs, and advising tasks
+              across disconnected tools.
             </p>
 
             <p>
-              From an HCI perspective, the same
-              underlying database information is
-              presented differently depending on
-              the user's task. Students need
-              guidance and comparison tools,
-              while advisors need a concise view
-              of the student's planning context.
+              From an HCI perspective, the dashboard
+              acts as a clear starting point for
+              different administrative tasks and
+              helps users understand where to go
+              next without exposing unnecessary
+              complexity all at once.
             </p>
 
           </div>
 
         </div>
+
+
+        <!-- Student Profiles -->
+
+        <div class="feature-showcase-item">
+
+          <div class="feature-media feature-image-pair">
+
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-admin-student-profiles-page.png"
+                alt="Administrator page listing study abroad student profiles"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Advisors can view and locate
+                student planning profiles.
+              </figcaption>
+
+            </figure>
+
+
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-advising-profile.png"
+                alt="Detailed study abroad advising profile showing student planning information"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Individual profiles organize
+                information that can support
+                an advising conversation.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+
+          <div class="feature-copy">
+
+            <p class="feature-label">
+              Advising
+            </p>
+
+            <h3>
+              Student Profiles &amp; Advising Context
+            </h3>
+
+            <p>
+              Advisors can move from a list of
+              students into an individual profile
+              containing information collected
+              during the student's planning process.
+            </p>
+
+            <p>
+              From an advising perspective, this
+              creates continuity between what the
+              student has already researched and
+              what the advisor may need to discuss
+              during an appointment.
+            </p>
+
+            <p>
+              From an HCI perspective, the system
+              does not simply repeat the student
+              interface for administrators. The
+              same information is reorganized
+              around the advisor's task: quickly
+              understanding the student's
+              planning context.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Tuition Rates -->
+
+        <div class="feature-showcase-item">
+
+          <div class="feature-media">
+
+            <figure>
+
+              <img
+                src="/assets/images/study-abroad-admin-home-tuition-rates.png"
+                alt="Administrator interface for maintaining home institution tuition rates"
+                loading="lazy"
+              >
+
+              <figcaption>
+                Institutional tuition information
+                can be maintained centrally for
+                use in budget calculations.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+
+          <div class="feature-copy">
+
+            <p class="feature-label">
+              Institutional Data
+            </p>
+
+            <h3>
+              Home Tuition Rate Management
+            </h3>
+
+            <p>
+              Administrators can maintain tuition
+              information used by the application
+              rather than embedding those values
+              directly into individual student
+              calculations.
+            </p>
+
+            <p>
+              For study abroad offices, costs such
+              as home tuition can depend on the
+              institution's own policies and may
+              change over time. Keeping these values
+              in an administrative interface makes
+              them easier to update consistently.
+            </p>
+
+            <p>
+              From a system-design perspective,
+              separating institutional data from
+              individual student inputs also makes
+              the application easier to maintain
+              and reduces unnecessary duplication.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Partner Cost Workflow -->
+
+    <section class="project-section">
+
+      <h2>
+        Partner Cost Collection Workflow
+      </h2>
+
+      <p>
+        Study abroad budgeting also depends on
+        accurate information from external program
+        partners and host institutions. I incorporated
+        a workflow for requesting, receiving, and
+        reviewing partner cost information.
+      </p>
+
+      <p>
+        The goal is to reduce the amount of manual
+        back-and-forth required to collect updated
+        program costs while still keeping staff
+        involved in reviewing information before
+        it becomes part of the advising process.
+      </p>
+
+
+      <div class="workflow-gallery">
+
+
+        <!-- Request Form -->
+
+        <figure>
+
+          <img
+            src="/assets/images/study-abroad-admin-cost-request-form.png"
+            alt="Administrator form for requesting updated study abroad program costs from a partner"
+            loading="lazy"
+          >
+
+          <figcaption>
+            1. An administrator prepares a request
+            for updated partner program costs.
+          </figcaption>
+
+        </figure>
+
+
+        <!-- Mock Emails -->
+
+        <figure>
+
+          <img
+            src="/assets/images/study-abroad-admin-cost-request-mock-emails.png"
+            alt="Mock email messages illustrating partner cost request communication"
+            loading="lazy"
+          >
+
+          <figcaption>
+            2. Mock email screens demonstrate how
+            communication could connect the
+            administrative and partner workflows.
+          </figcaption>
+
+        </figure>
+
+
+        <!-- Review Submission -->
+
+        <figure>
+
+          <img
+            src="/assets/images/study-abroad-admin-review-submitted-partner-costs.png"
+            alt="Administrator interface for reviewing submitted partner program costs"
+            loading="lazy"
+          >
+
+          <figcaption>
+            3. Staff can review submitted cost
+            information before using it in
+            program planning.
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+
+      <div class="project-highlight-grid">
+
+        <div class="project-highlight">
+
+          <strong>
+            Administrative Efficiency
+          </strong>
+
+          <p>
+            A structured request process can reduce
+            reliance on disconnected spreadsheets,
+            emails, and manual follow-up when
+            gathering program costs.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Human Review
+          </strong>
+
+          <p>
+            Submitted information is presented
+            for staff review rather than being
+            treated as automatically approved
+            program data.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            Workflow Visibility
+          </strong>
+
+          <p>
+            Breaking the process into clear steps
+            makes it easier for administrators
+            to understand what has been requested,
+            submitted, and reviewed.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-note">
+
+        <strong>
+          Demo Note
+        </strong>
+
+        <p>
+          The email screens shown in the portfolio
+          version are mock examples used to demonstrate
+          how communication could fit into the cost
+          request workflow.
+        </p>
 
       </div>
 
@@ -603,16 +1068,17 @@
         the project independently. I expanded the
         student planning experience, program and
         cost information, comparison workflows,
-        advising functionality, testing, and
-        portfolio deployment.
+        advisor tools, administrative workflows,
+        testing, and portfolio deployment.
       </p>
 
       <p>
-        This gave me the opportunity to move beyond
-        the requirements of the original database
-        assignment and think more broadly about
-        user experience, application architecture,
-        data management, and deployment.
+        This allowed me to move beyond the original
+        database assignment and consider the
+        application as a broader higher-education
+        product serving users with different goals,
+        responsibilities, and levels of technical
+        experience.
       </p>
 
     </section>
@@ -627,8 +1093,8 @@
       </h2>
 
       <p>
-        Preparing the portfolio version gave me
-        experience moving a database-backed
+        Preparing the portfolio version also gave
+        me experience moving a database-backed
         application beyond a local development
         environment and deploying its components
         using cloud services.
@@ -686,9 +1152,8 @@
             The application connects to a
             managed MySQL database hosted
             through Aiven, allowing the
-            database and application server
-            to operate as separate
-            cloud services.
+            application and database to run
+            as separate cloud services.
           </p>
 
         </div>
@@ -714,12 +1179,23 @@
           deployment on Render
         </p>
 
+        <p>
+          <strong>
+            External data:
+          </strong>
+          User-selected travel dates can be used
+          to retrieve current Google Flights pricing
+          for program cost comparisons, with stored
+          airfare estimates available when live
+          pricing is unavailable.
+        </p>
+
       </div>
 
     </section>
 
 
-    <!-- Technical Architecture -->
+    <!-- Full-Stack Architecture -->
 
     <section class="project-section">
 
@@ -729,8 +1205,9 @@
 
       <p>
         The application connects a browser-based
-        interface to Flask application logic and
-        a relational MySQL database.
+        interface to Flask application logic,
+        a relational MySQL database, and selected
+        external data services.
       </p>
 
 
@@ -745,9 +1222,9 @@
 
           <p>
             HTML, CSS, and JavaScript provide
-            the forms, navigation, filtering,
-            comparison tools, and other
-            interactive elements.
+            forms, navigation, filtering,
+            comparison tools, dashboards,
+            and other interactive elements.
           </p>
 
         </div>
@@ -762,8 +1239,8 @@
           <p>
             Python and Flask manage routes,
             application logic, validation,
-            authentication, and communication
-            with the database.
+            authentication, data processing,
+            and communication with the database.
           </p>
 
         </div>
@@ -779,22 +1256,29 @@
             MySQL stores interconnected
             information about students,
             programs, costs, budgets,
-            and advising-related data.
+            advising, and administrative data.
+          </p>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <strong>
+            External Data Integration
+          </strong>
+
+          <p>
+            The application can incorporate
+            current flight pricing for selected
+            travel dates into program comparisons,
+            connecting external information with
+            internally stored program data.
           </p>
 
         </div>
 
       </div>
-
-
-      <p>
-        Working across these layers gave me
-        experience connecting user-facing
-        functionality with server-side logic
-        and relational data rather than
-        treating each part of the application
-        as an isolated component.
-      </p>
 
     </section>
 
@@ -843,6 +1327,14 @@
 
         <span class="skill">
           Data Validation
+        </span>
+
+        <span class="skill">
+          API Integration
+        </span>
+
+        <span class="skill">
+          External Data Integration
         </span>
 
         <span class="skill">
@@ -895,16 +1387,18 @@
         in a private GitHub repository. The
         deployed portfolio version uses
         fictional information so employers
-        can explore the student planning and
-        advising workflows without access
-        to real student data.
+        and higher-education professionals
+        can explore the student planning,
+        advising, and administrative workflows
+        without access to real student data.
       </p>
 
       <p>
         The live demo provides an opportunity
         to explore how the database, application
-        logic, and user interface work together
-        as a complete system.
+        logic, user interface, cloud services,
+        and external data integrations work
+        together as a complete system.
       </p>
 
 
